@@ -1,10 +1,10 @@
 ---
-title: "Danish Kings. Fix variable names and check results."
+title: "Danish Kings."
 author: "Søren L.F. Lageri"
 date: "2026-03-06"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -233,7 +233,11 @@ three_longest_reigns_days_optimised <- Reign_duration %>%
 three_longest_reigns_days_optimised
 ```
 
-The three longest-ruling monarchs and their rules were:
+The three longest-ruling monarchs were:
+
+- `r three_longest_reigns_days_optimised$Name[1]` with a reign of `r three_longest_reigns_days_optimised$Reign_duration[1]` years or `r format(round(three_longest_reigns_days_optimised$Reign_days[1], 2), scientific = FALSE)` days
+- `r three_longest_reigns_days_optimised$Name[2]` with a reign of `r three_longest_reigns_days_optimised$Reign_duration[2]` years or `r format(round(three_longest_reigns_days_optimised$Reign_days[2], 2), scientific = FALSE)` days
+- `r three_longest_reigns_days_optimised$Name[3]` with a reign of `r three_longest_reigns_days_optimised$Reign_duration[3]` years or `r format(round(three_longest_reigns_days_optimised$Reign_days[3], 2), scientific = FALSE)` days
 
 ## Challenge: Plot the kings' duration of reign through time
 
